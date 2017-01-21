@@ -43,8 +43,8 @@
                 data="{{categoryData}}"
                 tail="{{categoryTail}}"></app-route>
 
-    <nav> 
-    <!-- nav menu -->           
+    <nav>
+    <!-- nav menu -->
       <iron-selector  selected="{{categoryData.category"
                       attr-for-selected="data-page">
         <a data-page="art" href="#/art/list">Art</a>
@@ -53,12 +53,15 @@
       </iron-selector>
     </nav>
 
+
     <main>
-      <h1>{{categoryTail}}</h1>
+      <h1>Tail = {{categoryTail.path}}</h1>
+      <h2>Category = {{categoryData.category}}</h1>
       <blog-pages route="{{categoryTail}}"
-                  category="{{categoryData.category">
+                  category="{{categoryData.category}}">
       </blog-pages>
     </main>
+
   </template>
 
   <script>

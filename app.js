@@ -2,7 +2,7 @@
 var tmpl = document.querySelector('#tmpl');
 console.log(tmpl);
 tmpl.heading = 'Hello HomeOfRecords visitors!';
-tmpl.page = 'snooze';
+tmpl.page = 'hondo';
 
 document.addEventListener('WebComponentsReady', function() {
 	var navicon = document.getElementById('navicon');
