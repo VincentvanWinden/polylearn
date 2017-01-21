@@ -1,0 +1,6 @@
+{
+  "name": "homeofrecords",
+  "short_name": "homeofrecords",
+  "start_url": "/",
+  "display": "standalone"
+}

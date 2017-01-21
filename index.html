@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>homeofrecords</title>
+    <meta name="description" content="homeofrecords description">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" 
+      href="/src/homeofrecords-app/homeofrecords-app.html">
+    <link rel="import" 
+      href="/src/blog-app/blog-app.html">
+    <link rel="import" href="elements.html">  
+    <link rel="import" href="theme.html">
+    <link rel="stylesheet" type="text/css" href="app.css">
+  </head>
+
+  <body fullbleed>
+    <template id="tmpl" is="dom-bind">
+      <paper-drawer-panel id="drawerpanel">
+        <paper-header-panel drawer>
+          <paper-toolbar>
+            <div>Menu</div>
+          </paper-toolbar>
+          <paper-menu selected="{{page}}" attr-for-selected="datacat">
+            <paper-item datacat="android">Android</paper-item>
+            <paper-item datacat="snooze">Snooze</paper-item>
+            <paper-item datacat="element">Element</paper-item>
+          </paper-menu>
+        </paper-header-panel> 
+
+        <paper-header-panel main>
+          <paper-toolbar>
+            <paper-icon-button id="navicon" icon="menu">
+            </paper-icon-button>
+            <div>{{heading}}</div>
+            <span class="flex"></span>
+            <paper-icon-button icon="search">
+            </paper-icon-button>
+            <!--
+            <paper-progress class="bottom fit" value="30"">
+            </paper-progress>
+            --> 
+          </paper-toolbar>
+          <div class="container">
+            <iron-pages selected="{{page}}" attr-for-selected="datacat">
+              <section datacat="android">
+                <iron-icon icon="android""></iron-icon>
+              </section>   
+              <section datacat="snooze">
+                <iron-icon icon="av:snooze"></iron-icon>
+              </section>
+              <section datacat="element">
+                <homeofrecords-app></homeofrecords-app>
+              </section>
+            </iron-pages>
+          </div>
+          <blog-app></blog-app>
+        </paper-header-panel>
+      </paper-drawer-panel>
+    </template>
+
+    <script src="app.js">
+    </script>
+  </body>
+</html>
