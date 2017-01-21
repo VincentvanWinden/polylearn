@@ -23,13 +23,14 @@
                   data="{{postsData}}"></carbon-route>
 
     <list-page category="{{category}}"
-               active={{listActive}}></list-page>
+               active="{{listActive}}>"</list-page>
 
     <post-page post="{{postsData.slug}}"
                active="{{postsActive}}"></post-page>
 
     <h1>blog-pages route = {{route.path}}</h1>
     <h1>blog-pages category = {{category}}</h1>
+    <h1>blog-pages active = {{listActive}}</h1>
   </template>
 
   <script>
